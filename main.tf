@@ -11,6 +11,7 @@ resource "azurerm_container_registry" "acr" {
   }
 
   network_rule_set {
+    count          = var.network_default_deny ? 1 : 0
     default_action = var.network_default_action
     ip_rule = [
       for ip in var.acr_authorized_ip_ranges : {
