@@ -19,12 +19,16 @@ resource "azurerm_container_registry" "acr" {
       }
     ]
   }
+
+  tags = var.tags
 }
 
 resource "azurerm_private_dns_zone" "acr" {
   count               = var.private_endpoint_enabled ? 1 : 0
   name                = "azurecr.io"
   resource_group_name = var.resource_group_name
+
+  tags = var.tags
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "acr" {
@@ -34,6 +38,8 @@ resource "azurerm_private_dns_zone_virtual_network_link" "acr" {
   resource_group_name   = var.resource_group_name
   private_dns_zone_name = "azurecr.io"
   virtual_network_id    = var.vnet_id_private_endpoint
+
+  tags = var.tags
 }
 
 resource "azurerm_private_endpoint" "acr" {
@@ -54,4 +60,6 @@ resource "azurerm_private_endpoint" "acr" {
     subresource_names              = ["registry"]
     is_manual_connection           = false
   }
+
+  tags = var.tags
 }

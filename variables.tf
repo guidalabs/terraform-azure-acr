@@ -55,3 +55,9 @@ variable "vnet_id_private_endpoint" {
   type    = string
   default = null
 }
+
+variable "tags" {
+  type        = map(string)
+  description = "Any tags can be set"
+  default     = {}
+}
