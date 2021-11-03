@@ -31,5 +31,3 @@ resource "azurerm_role_assignment" "aks-acr-assignment-pull" {
   principal_id         = module.aks.kubelet_identity.0.object_id
 }
 ```
-
-See [Configuration](configuration.md)
