@@ -35,7 +35,6 @@ No modules.
 | <a name="input_acr_name"></a> [acr\_name](#input\_acr\_name) | n/a | `string` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | n/a | `string` | `"westeurope"` | no |
 | <a name="input_network_default_action"></a> [network\_default\_action](#input\_network\_default\_action) | Deny or Allow traffic to the ACR by default. If you choose Deny, a list of authorized IP ranges should be configured | `string` | `"Deny"` | no |
-| <a name="input_network_default_deny"></a> [network\_default\_deny](#input\_network\_default\_deny) | n/a | `bool` | `true` | no |
 | <a name="input_private_endpoint_enabled"></a> [private\_endpoint\_enabled](#input\_private\_endpoint\_enabled) | If private\_endpoint is enabled clients can access the ACR over a private endpoint in their vnet. The clients don't have to be whitelisted in the authorized IP ranges | `bool` | `null` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | n/a | `string` | n/a | yes |
 | <a name="input_subnet_id_private_endpoint"></a> [subnet\_id\_private\_endpoint](#input\_subnet\_id\_private\_endpoint) | n/a | `string` | `null` | no |

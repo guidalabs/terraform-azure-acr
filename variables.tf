@@ -16,11 +16,6 @@ variable "acr_admin_enabled" {
   default = true
 }
 
-variable "network_default_deny" {
-  type    = bool
-  default = true
-}
-
 variable "network_default_action" {
   type        = string
   description = "Deny or Allow traffic to the ACR by default. If you choose Deny, a list of authorized IP ranges should be configured"
